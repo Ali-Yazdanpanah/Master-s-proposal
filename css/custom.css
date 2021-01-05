@@ -1,0 +1,26 @@
+.title {
+    font-size: 80px !important;
+}
+
+.text {
+    font-size: 30px !important;
+}
+
+.bold {
+    font-size: 100px !important;
+}
+
+.medium {
+    font-size: 60px !important;
+}
+
+
+
+.cross-validation {
+    width: 1000px !important;
+    height: 100px !important;
+    border: 10px !important;
+    border-color: aliceblue !important;
+    border-radius: 8px !important;
+    color: aliceblue !important;
+}

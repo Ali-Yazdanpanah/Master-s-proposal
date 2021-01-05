@@ -1,0 +1,338 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/blood.css" id="theme">
+        <link rel="stylesheet" href="css/custom.css" >
+        <link rel="stylesheet" href="css/tree.css" >
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				
+				<section>
+					<section data-auto-animate>
+
+						<p>
+							<small>Created by <a>
+								Ali Yazdanpanah</a> for <a>Fault Tolerant System Design - Fall 2020</a></small>
+						</p>
+					</section>
+					<section data-auto-animate>
+						<h4>Energy-Efficient Recovery Algorithm in the Fault-Tolerant Tree-Based FogComputing (FTBFC) Model</h4>
+						<p>
+							<small>Created by <a>
+								Ali Yazdanpanah</a> for <a>Fault Tolerant System Design - Fall 2020</a></small>
+						</p>
+					</section>
+				</section>
+				<section>
+					<section data-auto-animate>
+						<h1><i class="fa fa-cloud"></i></h1>
+                    </section>
+                    <section data-auto-animate>
+                        <h1><a><i class="fa fa-cloud"></i></a></h1>
+                        <h2>Fog computing</h2>
+					</section>
+					<section data-auto-animate>
+                        <h1><a><i class="fa fa-cloud"></i></a></h1>
+						<p class="text">Fog computing or fog networking, also known as fogging, is an architecture that uses edge devices to carry out a substantial amount of computation, storage, and communication locally and routed over the internet backbone. </p>
+                    </section>
+                    <!-- <section data-auto-animate>
+                        <h1><a><i class="fa fa-tree"></i></a></h1>
+                    </section> -->
+                    <section data-auto-animate>
+                        <h1><a><i class="fa fa-tree"></i></a></h1>
+						<p class="text">Tree-based fog computing - <a>TBFC</a></p>
+                    </section>
+                    <section data-auto-animate>
+                        <h1><a><i class="fa fa-tree"></i></a></h1>
+						<p class="text">Fog nodes are hierarchically structured in a height-balanced tree</p>
+                    </section>
+                    <section data-auto-animate>
+                        <h1><a><i class="fa fa-tree"></i></a></h1>
+						<p class="text">An application process is assumed to be a sequenceof subprocesses</p>
+                    </section>
+                    <section data-auto-animate>
+                        <h1><a><i class="fa fa-tree"></i></a></h1>
+						<p class="text">Every node at each level is equipped with the same subprocess</p>
+                    </section>
+                    <section data-auto-animate>
+                        <h1><a><i class="fa fa-tree"></i></a></h1>
+						<p class="text">Each node receives input data from child nodes and performs the subprocess onthe data</p>
+                    </section>
+					<section>
+						<div class="tree">
+                            <ul>
+                          <li>
+                            <a href="#"><i class="fa fa-cloud"></i></a>
+                            <ul>
+                              <li>
+                                <a href="#">Edge Node</a>
+                                <ul>
+                                  <li>
+                                    <a href="#"><i class="fa fa-eye"></i></a>
+                                  </li>
+                                  <li>
+                                    <a href="#"><i class="fa fa-cog"></i></a>
+                                  </li>
+                                </ul>
+                              </li>
+                              <li>
+                                <a href="#">Edge Node</a>
+                                <ul>
+                                  <li>
+                                    <a href="#"><i class="fa fa-cog"></i></a>
+                                  </li>
+                                  <li>
+                                    <a href="#"><i class="fa fa-cog"></i></a>
+                                  </li>
+                                  <li>
+                                    <a href="#"><i class="fa fa-eye"></i></a>
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section data-auto-animate>
+						<h1><i class="fa fa-plus-square"></i></h1>
+                    </section>
+                    <section data-auto-animate>
+                        <p class="text">It is shown the <a>energy consumption</a> and <a>execution time</a> of nodes are shown to be <a>reduced</a> in the TBFC model compared with the cloud computing model</p>
+                        <h1><a><i class="fa fa-plus-square"></i></a></h1>
+					</section>
+					<section data-auto-animate>
+						<h1><i class="fa fa-minus-square"></i></h1>
+                    </section>
+                    <section data-auto-animate>
+                        <h4 >What happens to a faulty node?</h4>
+                        <h1><a><i class="fa fa-minus-square"></i></a></h1>
+                    </section>
+                    <section data-auto-animate>
+                        <h1 class="title">Fault-tolerant TBFC  (<a>FTBFC</a>)</h1>
+                    </section>
+                    <section data-auto-animate>
+                        <p class="medium">An operational node at the <a>same level</a> as a faulty node is a candidate node</p>
+                    </section>
+                    <section>
+                        <p class="medium">the total <a>energy consumption</a> and <a>executiontime</a> of all the nodes are shown to be <a>reduced</a></p>
+                    </section>
+                    <section>
+                        <h1 class="bold">BUT</h2>
+                    </section>
+                    <section data-auto-animate>
+                        <h1 class="bold"><i class="fa fa-chart-line"></i></h1>
+                    </section>
+                    <section data-auto-animate>
+                        <h1 class="title"><a><i class="fa fa-chart-line"></i></a></h1>
+                        <p class="medium">The <a>reduction ratio</a> is <a>small</a> in scalable system</p>
+                    </section>
+				</section>
+				<section>
+					<section data-auto-animate>
+                        <h1 class="title"> modified FTBFC (<a>MFTBFC</a>)</h1>
+                    </section>
+                    <section data-auto-animate>
+                        <h1><i class="fa fa-heart"></i></h1>
+					</section>
+					<section data-auto-animate>
+                        <h1><i class="fa fa-heart"></i></h1>
+                        <h1 class="title"><a>SMPR</a> (selecting multiple parents for recovery)</h1>
+					</section>
+                    <section >
+                        <h1 class="title"><a>SMPR</a></h1>
+                        <p class="text">Selects a candidate node as a <a>new parent</a> node of each disconnected node so that the <a>energy consumption</a> of new parent nodes can be reduced</p>
+                    </section>   
+				</section>
+                <section>
+                    <section data-auto-animate>
+                        <h2 class="title">Energy consumption</h2>
+                    </section>
+                    <section data-auto-animate>
+                        <h2 class="text"><a>Energy consumption</a></h2>
+                        <p class="text">Each node <a>fR</a> consumes the energy <a>TER(iR)</a> for input data <a>DR</a> of size <a>iR(=|DR|)</a> and output data <a>dR</a> of size <a>oR</a>(=|dR|=ρR·iR)</p>
+                    </section>
+                    <section data-auto-animate>
+                        <h2 class="text"><a>Energy consumption of:</a></h2>
+                        <p class="title">input</p> 
+                    </section>
+                    <section data-auto-animate>
+                        <h2 class="text"><a>Energy consumption of:</a></h2>
+                        <p class="title">input <a>+</a> computation </p>
+                    </section>
+                    <section data-auto-animate>
+                        <h2 class="text"><a>Energy consumption of:</a></h2>
+                        <p class="title">input <a>+</a> computation <a>+</a> storage</p>
+                    </section>
+                    <section data-auto-animate>
+                        <h2 class="text"><a>Energy consumption of:</a></h2>
+                        <p class="title">input <a>+</a> computation <a>+</a> storage <a>+</a> output modules</p>
+                    </section>
+
+                    <section data-auto-animate>
+                        <h2 class="title">Execution time</h2>
+                    </section>
+                    <section data-auto-animate>
+                        <h2 class="text"><a>Execution time</a></h2>
+                        <p class="text">ETR(iR)=TIR(iR)+TCR(iR)+TSR(iR+oR)+δR·TOR(oR).(2)=TIR(iR)+TCR(iR)+TSR((1 +ρR)·iR)+δR·TOR(ρR·iR).</p>
+                    </section>
+                    <section >
+                        <h2 class="text"><a>Execution time:</a></h2>
+                        <p class="text"><a>ETR(iR)</a> of each node <a>fR</a> to receive and compute input data <a>DR</a>, send output data <a>dR</a>, and store the data <a>DR</a> and <a>dR</a></p> 
+                    </section>
+                    <section data-auto-animate>
+                        <h2 class="text"><a>Execution time:</a></h2>
+                        <p class="title">input</p>
+                    </section>
+                    <section data-auto-animate>
+                        <h2 class="text"><a>Execution time:</a></h2>
+                        <p class="title">input <a>+</a> computation </p>
+                    </section>
+                    <section data-auto-animate>
+                        <h2 class="text"><a>Execution time:</a></h2>
+                        <p class="title">input <a>+</a> computation <a>+</a> storage</p>
+                    </section>
+                    <section data-auto-animate>
+                        <h2 class="text"><a>Execution time:</a></h2>
+                        <p class="title">input <a>+</a> computation <a>+</a> storage <a>+</a> output modules</p>
+                    </section>
+
+                   
+                    <section data-auto-animate>
+                        <h2 class="title">Power consumption</h2>
+                    </section>
+                    <section data-auto-animate>
+                        <h2 class="text"><a>Power consumption</a></h2>
+                        <p class="text"><a>PIR</a> and <a>POR</a> of the input <a>IR</a> and output <a>OR</a></p>
+                    </section>
+                    <section data-auto-animate>
+                        <h2 class="text"><a>Execution time:</a></h2>
+                        <p class="text"><a>PIR</a> and <a>POR</a> are proportional to the receiving and transmission rates of a node <a>fR</a></p> 
+                    </section>
+                    <section data-auto-animate>
+                        <h2 class="text"><a>Execution time:</a></h2>
+                        <p class="text"><a>PIR</a> and <a>POR</a> are proportional to the receiving and transmission rates of a node <a>fR</a></p> 
+                        <p class="medium">EIR(iR)=PIR·TIR(iR)</p>
+                    </section>
+                    <section data-auto-animate>
+                        <h2 class="text"><a>Execution time:</a></h2>
+                        <p class="text"><a>PIR</a> and <a>POR</a> are proportional to the receiving and transmission rates of a node <a>fR</a></p> 
+                        <p class="medium">EIR(iR)=PIR·TIR(iR)</p>
+                        <p class="medium">EOR(ρR·iR)=POR·TOR(ρR·iR)</p>
+                    </section>
+                </section>
+				<section>
+					<section>
+						<h1 class="title">Algorithm</h1>
+					</section>
+					<section>
+                        ME (minimum energy) algorithm
+						<pre >
+                            <code data-trim data-line-numbers="1|2|3|5-8">
+                                Input: fR = faulty node
+                                Output:fU = new parent node
+                                E=∞;
+                                foreach candidate fog nodefS in cn(fR) do
+                                    NTES=TES(iS+iR);
+                                    if NTES &lt; E then
+                                        U = S;
+                                        E = NTES;
+                            </code>
+                        </pre>
+                    </section>
+                    <section>
+                        SMPR (selecting multiple parents for recovery) algorithm
+						<pre >
+                            <code data-trim data-line-numbers="1|2|3-13|4-5|6-12">
+                                Input: fR = faulty node
+                                F=ch(fR);
+                                while F != φ do
+                                    select a disconnected node fD in F whose sizeo Dof output data is maximum;
+                                    C = cn(fR);
+                                    while C !=φ do
+                                        select a candidate node fU where TEU(iU+oD) is minimum in C;
+                                        connect fD to fU;
+                                        ch(fU) = ch(fU) ∪ {fD};
+                                        pt(fD) = {fU};
+                                        iU = iU + oD;
+                                        C = C - {fU};
+                                    F = F - {fD};
+                            </code>
+                        </pre>
+					</section>
+                </section>
+                <section>
+                    <section>
+                        <h1 class="title">Evaluation</p>
+                    </section>
+                    <section>
+                        <h1 class="title">Energy consumption</p>
+                    </section>
+                    <section>
+                        <p class="text">The <a>energy consumption</a> of a new parent node selected by the <a>SMPR</a> algorithm is about <a>34%</a> and <a>25%</a> for computation complexity <a>O(x)</a> and <a>57%</a> and <a>44%</a> for <a>O(x^2)</a> smaller than the <a>RD</a> and <a>ME</a> algorithms</p>
+                    </section>
+                    
+                    <section>
+                        <img src="images/1.png" alt="">
+                        <p class="text"><a>Energy consumption of a new parent node of computation complexity O(x) for height h</a></p>
+                    </section>
+                    <section>
+                        <img src="images/2.png" alt="">
+                        <p class="text"><a>Energy consumption of a new parent node of computation complexity O(x^2) for height h</a></p>
+                    </section>
+                    <section>
+                        <p class="text">The <a>energy consumption</a> of a new parent node selected by the <a>SMPR</a> algorithm is about <a>34%</a> and <a>25%</a> for computation complexity <a>O(x)</a> and <a>57%</a> and <a>44%</a> for <a>O(x^2)</a> smaller than the <a>RD</a> and <a>ME</a> algorithms</p>
+                    </section>
+                    <section>
+                        <h1 class="title">Execution time</p>
+                    </section>
+                    <section>
+                        <p class="text">The <a>Execution time</a> of a new parent node selected by the <a>SMPR</a> algorithm is about <a>34%</a> and <a>25%</a> for computation complexity <a>O(x)</a> and <a>57%</a> and <a>44%</a> for <a>O(x^2)</a> smaller than the <a>RD</a> and <a>ME</a> algorithms</p>
+                    </section>
+                    <section>
+                        <img src="images/3.png" alt="">
+                        <p class="text"><a>Execution time of a new parent node of computation complexity O(x) for height h</a></p>
+                    </section>
+                    <section>
+                        <img src="images/4.png" alt="">
+                        <p class="text"><a>Execution time of a new parent node of computation complexity O(x^2) for height h</a></p>
+                    </section>
+                </section>
+				<SECtion>
+                    <h1><a><i class="fa fa-question"></i></a></h1>
+					<h1 class="title">Questions</h1>
+				</SECtion>
+				<SECtion>
+					<h1>Thank you</h1>
+				</SECtion>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="https://kit.fontawesome.com/f2458a263a.js" crossorigin="anonymous"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, ]
+			});
+		</script>
+	</body>
+</html>

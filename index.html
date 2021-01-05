@@ -1,0 +1,498 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/beige.css" id="theme">
+		<link rel="stylesheet" href="css/custom.css" >
+		
+		<!-- Theme used for syntax highlighted code -->
+		<!-- <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme"> -->
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				
+				<section>
+					<section data-auto-animate>
+
+						<p>
+							<small>Created by <a>
+								Ali Yazdanpanah</a> for <a>Masters' proposal presentation</a> - Winter 2021 </small>
+						</p>
+					</section>
+					<section data-auto-animate>
+						<h3>A workload aware framework to maximize GPU utilization in multi-task environments</h3>
+						<p>
+							<small>Created by <a>
+								Ali Yazdanpanah</a> for <a>Master's proposal presentation</a> - Winter 2021 </small>
+						</p>
+					</section>
+				</section>
+				<section>
+						<h1><i class="fas fa-exclamation-triangle"></i></h1>
+						<h3><span> If it's possible view this presentation on a wide screen</span></h1>
+				</section>
+				<section data-auto-animate>
+					<ul>
+						<h3>
+							<li>
+								Introduction						
+							</li>
+						</h3>
+						<h3>
+							<li>
+								Related Works
+							</li>
+						</h3>
+						<h3>
+							<li>
+								Goal
+							</li>
+						</h3>
+						<h3>
+							<li>
+								References
+							</li>
+						</h3>
+					</ul>
+				</section>
+				<section data-auto-animate>
+					<section>
+						<ul>
+							<h1>
+								<li>
+									Introduction						
+								</li>
+							</h1>
+						</ul>
+					</section>
+					<section data-background="city.jpg">
+						<h1>
+							<a>Origins of GPU</a>
+						</h1>
+					</section>
+					<section >
+						<p class="medium">
+							GPUs were originally designed for <span class="fragment highlight-red">graphics computing</span> and <span class="fragment highlight-red">image processing</span> purposes
+						</p>
+					</section>
+					<section >
+						<h2 class="title"><i class="fa fa-ruler"></i> 	<a class="text">VS</a>  <i class="fa fa-cog"></i></h2>
+					</section>
+					<section >
+						<h2>Parallel nature</h2>
+					</section>
+					<section >
+						<h2><i class="fa fa-minus-square"></i> General purpose computing</h2>
+					</section>
+					<section >
+						<h2><i class="fa fa-plus-square"></i> Geometrical computing</h2>
+					</section>
+					<section data-background="city.jpg">
+						<h1><a>Parallel architecture</a></h1>
+					</section>
+					<section data-background="gradient.jpg">
+						<h1><a>HPC and DL</a></h1>
+					</section>
+					<section data-background="summit.jpg">
+						<h1><a>Summit</a></h1>
+						<h2><span class="fragment highlight-red">GPU/CPU clusters</span></h2>
+					</section>
+
+					<section>
+						<h1>
+							Motivation						
+						</h1>
+					</section>
+					<section>
+						<h1>
+							Utilization						
+						</h1>
+					</section>
+					<section>
+						<h3>
+							GPU workloads have <a>exclusive</a> designs						
+						</h3>
+					</section>
+
+					<section data-background="summit.jpg">
+						<h1><a>Summit</a></h1>
+						<h1><a class="fragment highlight-red">1.5%</a></h1>
+					</section>
+					<section>
+						<h3>
+							<a>Multi-task</a> environments						
+						</h3>
+					</section>
+					<section data-auto-animate>
+						<ul>
+							<h3>
+								<li>
+										Performance						
+								</li>
+							</h3>
+							<h3>
+								<li>
+										Memory						
+								</li>
+							</h3>
+							<h3>
+								<li>
+										Power						
+								</li>
+							</h3>
+						</ul>
+					</section>
+					<section data-auto-animate>
+						<ul>
+							<h2>
+								<li>
+										Performance						
+								</li>
+							</h2>
+						</ul>
+					</section>
+					<section>
+						<p class="title">
+							GPU workloads have <a>exclusive</a> designs						
+						</p>
+					</section>
+					<section>
+						<p class="title">
+							A <a>kernel</a> with full <a>resource</a> usage is not always the case					
+						</p>
+					</section>
+					<section>
+						<p class="title">
+							There technologies tools like <a>hyperQ</a> and <a>MPS</a>						
+						</p>
+					</section>
+					<section>
+						<h1><i class="fa fa-question-circle"></i></h1>
+					</section>
+					<section>
+						<h1>
+							Workload <a>Aware</a>	
+						</h1>
+					</section>
+					<section data-auto-animate>
+						<ul>
+							<h2>
+								<li>
+										Memory						
+								</li>
+							</h2>
+						</ul>
+					</section>
+					<section data-background="gradient.jpg">
+						<h1><a>HPC and DL</a></h1>
+					</section>
+					<section>
+						<p class="title">
+							Tools like <a>Kubernetes</a>, <a>Torque</a> and <a>Slurm</a> can't schedule multiple taks					
+						</p>
+					</section>
+					<section>
+						<p class="title">
+							GPU workloads have <a>exclusive</a> designs						
+						</p>
+					</section>
+					<section>
+						<h1><i class="fas fa-exclamation-triangle"></i></h1>
+						<h1><a>Safety</a></h1>
+					</section>
+					<section>
+						<p class="title">
+							GPU memory stays <a>occupied</a> until the kernel is <a>finished</a>
+						</p>
+					</section>
+					<section data-auto-animate>
+						<ul>
+							<h2>
+								<li>
+										Power						
+								</li>
+							</h2>
+						</ul>
+					</section>
+					<section>
+						<p class="title">
+							With great <a>computing power</a> comes high power <a>consumption</a>
+						</p>
+					</section>
+					<section>
+						<p class="title">
+							Can be solved with techniques like <a>Kernel fusion</a>
+						</p>
+					</section>
+					
+				</section>
+				<section>
+					<section>
+						<ul>
+							<h1>
+								<li>
+									Related Works						
+								</li>
+							</h1>
+						</ul>
+					</section>
+					<section data-auto-animate>
+						<ul>
+							<h3>
+								<li>
+										GPU scheduling						
+								</li>
+							</h3>
+							<h3>
+								<li>
+										Resource sharing						
+								</li>
+							</h3>
+						</ul>
+					</section>
+					<section data-auto-animate>
+						<ul>
+							<h2>
+								<li>
+										GPU scheduling						
+								</li>
+							</h2>
+						</ul>
+					</section>
+					<section>
+						<ul>
+							<h2>
+								<li>
+										Hardware utilizations						
+								</li>
+							</h2>
+							<h2>
+								<li>
+										Sofware scheduling						
+								</li>
+							</h2>
+						</ul>
+					</section>
+					<section>
+						<ul>
+							<h2>
+								<li>
+										Hardware utilizations						
+								</li>
+							</h2>
+						</ul>
+					</section>
+					<section data-auto-animate>
+						<ul>
+							<h3>
+								<li>
+										Grid reshaping						
+								</li>
+							</h3>
+						</ul>
+					</section>
+					<section data-auto-animate>
+						<ul>
+							<h3>
+								<li>
+										Grid reshaping						
+								</li>
+							</h3>
+							<h3>
+								<li>
+										Preemption						
+								</li>
+							</h3>
+						</ul>
+					</section>
+					<section>
+						<ul>
+							<h2>
+								<li>
+										Software scheduling					
+								</li>
+							</h2>
+						</ul>
+					</section>
+					<section data-auto-animate>
+						<ul>
+							<h3>
+								<li>
+										Fine grained scheduling						
+								</li>
+							</h3>
+						</ul>
+					</section>
+					<section>
+						<p class="title">
+							They only focused on <a>load balancing</a> between nodes
+						</p>
+					</section>
+					<section data-auto-animate>
+						<ul>
+							<h3>
+								<li>
+										Slate						
+								</li>
+							</h3>
+						</ul>
+					</section>
+					<section>
+						<p class="title">
+							Running <a>kernels</a> based on their <a>features</a>
+						</p>
+					</section>
+					<section data-auto-animate>
+						<ul>
+							<h2>
+								<li>
+										Resource sharing						
+								</li>
+							</h2>
+						</ul>
+					</section>
+					<section>
+						<ul>
+							<h3>
+								<li>
+										Dynamic resource allocation using simulation						
+								</li>
+							</h3>
+						</ul>
+					</section>
+					<section>
+						<ul>
+							<h3>
+								<li>
+										<a>ConVGPU</a>	- GPU memory sharing between docker containers					
+								</li>
+							</h3>
+						</ul>
+					</section>
+					<section>
+						<ul>
+							<h3>
+								<li>
+									<a>GaiaGPU</a>	- memory aware 					
+								</li>
+							</h3>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<ul>
+							<h1>
+								<li>
+									Goal						
+								</li>
+							</h1>
+						</ul>
+					</section>
+					<section>
+						<p class="medium">
+							The final goal of this research is to create a <a>workload aware</a> framework to <a>maximize</a> gpu <a>utilization</a> based on <a>performance</a>, <a>memory</a> and <a>power consumption</a> in multi-task environments
+						</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<ul>
+							<h1>
+								<li>
+									References						
+								</li>
+							</h1>
+						</ul>
+					</section>
+					<section>
+						<pre style="width: 100%;">
+							<code style="width: 100%;">
+[1] “Amazon AWS.”https://aws.amazon.com/cn/nvidia/
+
+[2] “MicrosoftAzure.”https://www.nvidia.com/en-us/data-center/gpu-cloud-computing/microsoft-azure/
+
+[3] “Google Cloud.”https://cloud.google.com/gpu
+
+[4] “Top 500 list at Nov 2019.”https://www.top500.org/lists/2019/11/
+
+[5] “Summit.”https://www.olcf.ornl.gov/summit
+
+[6] C. Chen, Y. Du, H. Jiang, K. Zuo, and C. Yang, “Hpcg: Preliminary eval-uation andoptimization on tianhe-2 cpu-only nodes,” in2014 IEEE 26thInternational Symposium onComputer Architecture and High PerformanceComputing, pp. 41–48, Oct 2014.
+
+[7] Q.   Xu,   H.   Jeon,   and   M.   Annavaram,   “Graph   processing   on   gpus:   Whereare   thebottlenecks?,”   in2014   IEEE   International   Symposium   on   WorkloadCharacterization(IISWC), pp. 140–149, 2014.
+
+[8] H. Jeon and M. Annavaram, “Warped-dmr: Light-weight error detectionfor gpgpu,”in2012 45th Annual IEEE/ACM International Symposium onMicroarchitecture, pp. 37–47,2012.
+
+[9] “Kubernetes.”https://kubernetes.io
+
+[10] “Slurm.”https://www.schedmd.com/index.php
+
+[11] “Torque.”http://www.adaptivecomputing.com/products/torque/
+
+[12] M. Lee, S. Song, J. Moon, J. Kim, W. Seo, Y. Cho, and S. Ryu, “Improvinggpgpuresource   utilization   through   alternative   thread   block   scheduling,”   in2014   IEEE   20thInternational Symposium on High Performance ComputerArchitecture (HPCA), pp. 260–271, IEEE, 2014.
+
+[13] “NVIDIAHyper-Q.”http://developer.download.nvidia.com/compute/DevZone/C/html_x64/6_Advanced/simpleHyperQ/doc/HyperQ.pdf.
+
+[14] “NVIDIA MPS.” https://docs.nvidia.com/deploy/mps/index.html
+
+[15] G. Wang, Y. Lin, and W. Yi. Kernel fusion: An effective method forbetter powerefficiency on multithreaded gpu. In2010 IEEE/ACM Int’lConference on Green Computingand Communications Int’l Conferenceon Cyber, Physical and Social Computing, pages 344–350, Dec 2010.
+
+[16] Sreepathi     Pai,     Matthew     J.     Thazhuthaveetil,     and     R.Govindarajan.2013.ImprovingGPGPUconcurrencywithelastickernels.SIGPLANNot.48,4(March2013),407-418.DOI:https://doi.org/10.1145/2499368.2451160.
+
+[17] Jason Jong Kyu Park, Yongjun Park, and Scott Mahlke. 2015.Chimera: CollaborativePreemption for Multitasking on a Shared GPU.SIGARCH Comput. Archit. News 43, 1(March 2015), 593-606. DOI:https://doi.org/10.1145/2786763.2694346
+
+[18] Z. Wang, J. Yang, R. Melhem, B. Childers, Y. Zhang and M. Guo,SimultaneousMultikernel GPU: Multi-tasking throughput processorsvia fine-grained sharing, 2016 IEEEInternational Symposium on HighPerformance Computer Architecture (HPCA), Barcelona,2016, pp. 358-369.
+
+[19] Maas,   Martin,Asanovi   Krste,Harris   Tim,   Kubiatowicz   John.Taurus:SchedulingConcurrent   Applications   on   a   Cluster   of   CPU-GPU   Nodes.2012   12th   IEEE/ACMInternational Symposium on Cluster, Cloud andGrid Computing (ccgrid 2012).pp.140-147.
+
+[20] Agulleiro, J. I., et al. Dynamic load scheduling on CPU-GPU for iterativetomographicreconstruction.   2012   IEEE   10th   International   Symposiumon   Parallel   and   DistributedProcessing with Applications. IEEE, 2012.
+
+[21] Chen,   Long,   Oreste   Villa,   and   Guang   R.   Gao.   Exploring   fine-grainedtask-basedexecution   on   multi-GPU   systems.   2011   IEEE   InternationalConference   on   ClusterComputing. IEEE, 2011.
+
+[22] T.Allen,X Feng, R.Ge.Slate: Enabling Workload-Aware Efficient Multi-processing forModern GPGPUs. 2019 IEEE International Parallel andDistributed Processing Symposium(IPDPS).pp. 252-261.
+
+[23] Jason Jong Kyu Park, Yongjun Park, and Scott Mahlke. 2017. DynamicResourceManagement for Efficient Utilization of Multitasking GPUs.In Proceedings of the Twenty-Second International Conference on Ar-chitectural Support for Programming Languages andOperating Systems(ASPLOS ’17). ACM, New York, NY, USA, 527-540.
+
+[24] C.   Yu   et   al.,   SMGuard:   A   Flexible   and   Fine-Grained   Resource   Man-agementFramework for GPUs, in IEEE Transactions on Parallel andDistributed Systems, vol. 29, no.12, pp. 2849-2862, 1 Dec. 2018.
+
+[25] Kang, Daeyoun, et al. ConVGPU: GPU management middleware incontainer basedvirtualized   environment.   2017   IEEE   International   Con-ference   on   Cluster   Computing(CLUSTER). IEEE, 2017.
+
+[26] Gu, Jing, et al. GaiaGPU: Sharing GPUs in Container Clouds. 2018IEEE Intl Conf onParallel   &   Distributed   Processing   with   Applica-tions,   Ubiquitous   Computing   &Communications,   Big   Data   &   CloudComputing,   Social   Computing   &   Networking,SustainableComputing&Communications(ISPA/IUCC/BDCloud/SocialCom/SustainCom).IEEE, 2018.
+							</code>
+						</pre>
+					</section>
+				</section>
+				<SECtion>
+					<h1><i class="fa fa-question-circle"></i></h1>
+				</SECtion>
+				<SECtion>
+					<h1>Thank you</h1>
+				</SECtion>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="https://kit.fontawesome.com/f2458a263a.js" crossorigin="anonymous"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, ]
+			});
+		</script>
+	</body>
+</html>
