@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>A workload aware framework to maximize GPU utilization in multi-task environments</title>
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
@@ -23,7 +23,7 @@
 
 						<p>
 							<small>Created by <a>
-								Ali Yazdanpanah</a> for <a>Masters' proposal presentation</a> - Winter 2021 </small>
+								Ali Yazdanpanah</a> for <a>Master's proposal presentation</a> - Winter 2021 </small>
 						</p>
 					</section>
 					<section data-auto-animate>
@@ -101,7 +101,7 @@
 						<h1><a>HPC and DL</a></h1>
 					</section>
 					<section data-background="summit.jpg">
-						<h1><a>Summit</a></h1>
+						<h1><a>Summit</a> <a class="refrence">[5]</a></h1>
 						<h2><span class="fragment highlight-red">GPU/CPU clusters</span></h2>
 					</section>
 
@@ -122,8 +122,8 @@
 					</section>
 
 					<section data-background="summit.jpg">
-						<h1><a>Summit</a></h1>
-						<h1><a class="fragment highlight-red">1.5%</a></h1>
+						<h1><a>Summit</a>  <a class="refrence">[5]</a></h1>
+						<h1><a class="fragment highlight-red">1.5%</a>  <a class="refrence">[8]</a></h1>
 					</section>
 					<section>
 						<h3>
@@ -165,12 +165,12 @@
 					</section>
 					<section>
 						<p class="title">
-							A <a>kernel</a> with full <a>resource</a> usage is not always the case					
+							A <a>kernel</a> with full <a>resource</a> usage is not always the case<a class="refrence">[12]</a>				
 						</p>
 					</section>
 					<section>
 						<p class="title">
-							There technologies tools like <a>hyperQ</a> and <a>MPS</a>						
+							There technologies tools like <a>hyperQ</a><a class="refrence">[13]</a> and <a>MPS</a><a class="refrence">[14]</a>						
 						</p>
 					</section>
 					<section>
@@ -195,7 +195,7 @@
 					</section>
 					<section>
 						<p class="title">
-							Tools like <a>Kubernetes</a>, <a>Torque</a> and <a>Slurm</a> can't schedule multiple taks					
+							Tools like <a>Kubernetes</a><a class="refrence">[9]</a>, <a>Torque</a><a class="refrence">[11]</a> and <a>Slurm</a><a class="refrence">[10]</a> can't schedule multiple taks					
 						</p>
 					</section>
 					<section>
@@ -228,7 +228,7 @@
 					</section>
 					<section>
 						<p class="title">
-							Can be solved with techniques like <a>Kernel fusion</a>
+							Can be solved with techniques like <a>Kernel fusion</a><a class="refrence">[15]</a>
 						</p>
 					</section>
 					
@@ -293,7 +293,7 @@
 						<ul>
 							<h3>
 								<li>
-										Grid reshaping						
+										Grid reshaping<a class="refrence">[16]</a>						
 								</li>
 							</h3>
 						</ul>
@@ -307,10 +307,15 @@
 							</h3>
 							<h3>
 								<li>
-										Preemption						
+										Preemption<a class="refrence">[17] [18]</a>				
 								</li>
 							</h3>
 						</ul>
+					</section>
+					<section data-auto-animate>
+						<p class="medium">
+							Preemtion is a <a>young</a> technology introduced by Tesla P100 
+						</p>
 					</section>
 					<section>
 						<ul>
@@ -325,7 +330,21 @@
 						<ul>
 							<h3>
 								<li>
-										Fine grained scheduling						
+									Mechanism to load multiple task in GPU clusters<a class="refrence">[19]</a>									
+								</li>
+							</h3>
+						</ul>
+					</section>
+					<section>
+						<p class="title">
+							Their method was <a>power efficient</a> missed <a>intra-node communications</a>
+						</p>
+					</section>
+					<section data-auto-animate>
+						<ul>
+							<h3>
+								<li>
+										Fine grained scheduling<a class="refrence">[20] [21]</a>						
 								</li>
 							</h3>
 						</ul>
@@ -339,7 +358,7 @@
 						<ul>
 							<h3>
 								<li>
-										Slate						
+										Slate<a class="refrence">[22]</a>				
 								</li>
 							</h3>
 						</ul>
@@ -362,7 +381,7 @@
 						<ul>
 							<h3>
 								<li>
-										Dynamic resource allocation using simulation						
+										Dynamic resource allocation using simulation<a class="refrence">[23]</a>						
 								</li>
 							</h3>
 						</ul>
@@ -371,7 +390,7 @@
 						<ul>
 							<h3>
 								<li>
-										<a>ConVGPU</a>	- GPU memory sharing between docker containers					
+										A solution to consider time sensetive kernels using priorities<a class="refrence">[24]</a>						
 								</li>
 							</h3>
 						</ul>
@@ -380,10 +399,24 @@
 						<ul>
 							<h3>
 								<li>
-									<a>GaiaGPU</a>	- memory aware 					
+									<a>ConVGPU</a>	- GPU memory sharing between docker containers<a class="refrence">[25]</a>					
 								</li>
 							</h3>
 						</ul>
+					</section>
+					<section>
+						<ul>
+							<h3>
+								<li>
+									<a>GaiaGPU</a>	- memory aware<a class="refrence">[26]</a> 					
+								</li>
+							</h3>
+						</ul>
+					</section>
+					<section>
+						<p class="title">
+							Our research is alligned with these researches in terms of <a>resource sharing</a>
+						</p>
 					</section>
 				</section>
 				<section>
@@ -397,8 +430,63 @@
 						</ul>
 					</section>
 					<section>
-						<p class="medium">
+						<p class="text">
 							The final goal of this research is to create a <a>workload aware</a> framework to <a>maximize</a> gpu <a>utilization</a> based on <a>performance</a>, <a>memory</a> and <a>power consumption</a> in multi-task environments
+						</p>
+					</section>
+					<section>
+						<h1>
+							Utilization						
+						</h1>
+					</section>
+					<section>
+						<ul>
+							<h2>
+								<li>
+										Performance						
+								</li>
+							</h2>
+						</ul>
+					</section>
+					<section>
+						<p class="text">
+							We aim to accomplish <a>preformance</a> utilization through methods like <a>memory masking</a>, <a>dynamic kernel scheduling</a> using preemption and live monitoring and enabling <a>multi-kernel</a> launches
+						</p>
+					</section>
+					<section>
+						<ul>
+							<h2>
+								<li>
+										Memory						
+								</li>
+							</h2>
+						</ul>
+					</section>
+					<section>
+						<p class="text">
+							We aim to accomplish <a>memory</a> utilization through methods like <a>memory aware multi-kernel launch</a>, <a>memory swapping</a> and <a>kernel checkpoints</a>
+						</p>
+					</section>
+					<section>
+						<ul>
+							<h2>
+								<li>
+										Power						
+								</li>
+							</h2>
+						</ul>
+					</section>
+					<section>
+						<p class="text">
+							We aim to accomplish <a>power</a> utilization through methods like <a>kernel fusion</a>
+						</p>
+					</section>
+					<section>
+						<h1>Why its research worthy?</h1>
+					</section>
+					<section>
+						<p class="text">
+							GPU optimization is a focus concern in cloud and cluster environments. Unlike other researches out aim is to address all three of <a>power</a>, <a>performance</a> and <a>memory</a> problems
 						</p>
 					</section>
 				</section>
